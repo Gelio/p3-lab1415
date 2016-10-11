@@ -1,0 +1,43 @@
+
+Zadanie polega na napisaniu klasy uogólnonej BinarySerachTree<TNode>.
+Klasa reprezentuje drzewo przeszukiwań binarnych.
+Drzewo składa się z węzłów, każdy węzeł posiada wartość typu TNode oraz prawe i lewe dziecko (być może puste). 
+
+Klasa podstawiona z TNode musli implementować interfejsy IComparable<TNode> i IEquatable<TNode>
+
+Klasa BinarySerachTree ma dwie metody: Add i RemoveSubTree. 
+
+Metoda Add dodaje nowy element w odpowiednie miejsce (jeśli w danym wierzchołku wartość jest większa od dodawanej
+to nową wartość należy dodać do prawego poddrzewa, a jeśli mniejsza to do lewego).
+Jeśli wartość jest już obecna w drzewie to nic nie robimy.
+
+Metoda RemoveSubTree usuwa wskazany element razem z całym poddrzewem.
+
+UWAGA: obie metody zwracają nowe zmodyfikowane drzewo pozostawiając stare bez zmian.
+Metody te należy napisać tak by nie kopioały za każdym razem całego drzewa
+tylko by zachowały możliwie jak największą część starego.
+
+Należy także napisać zestaw funkcji rozszerzających klasę BinarySearchTree.
+
+InOrder - Zwraca sekwencję, której elementami są wierzchołki drzewa od najmniejszego do największego.
+Metoda ta zwraca typ IEnumerable<TWierzch>.
+
+Write - wypisuje wierzchołki drzewa w kolejności od najmniejszego do największego.
+
+Search - wyszukuje element w drzewie jakow wynik zawraca podrzewo którego korzeniem jest szukany węzeł.
+
+NumberOfLeaves - zwraca liczbę liści drzewo (wierzchołków stopnia 1).
+
+IndexTree - przyjmuje drzewo, w którym klasa TNode implementuje interfejs IIndexable,
+przeszukuje drzewo wgłąb wchodząc w pierwszej kolejności zawsze do lewego poddrzewa.
+Kazdemu wierzchołkowi nadaje dwa indexy - wejścia (nr kroku w którym metoda wchodzi do wierczhołka)
+i wyjścia (nr kroku, w którym metoda wychodzi z wierzchołka).
+Do realizacji tego zadania można wykorzystać metodę rekurencyjną.
+
+Napisać klasę IndexableNode<TValue> która może być wykorzystywana jako parametr klasy BinarySerachTree i wspiera indeksowanie.
+Obiekty tej klasy powinny być porównywane po wartości Value (wartość ta powinna być IComparable<TValue> i IEquatable<TValue>).
+
+Punktacja
+Etap 1 - 2 pkt (Add, RemoveSubTree, InOrder, Write)
+Etap 2 - 1 pkt (Search, NumberOfLeaves)
+Etap 3 - 2 pkt (IndexTree, klasa IndexableNode)

@@ -1,0 +1,19 @@
+
+Etap1 
+Kazimierz 9, Boleslaw 7, Mieszko 5, Zygmunt 1, 
+Marvin 9, Paragrafor 7, E.T. 4, 
+Kazimierz:Stochasia, Boleslaw:Stochasia, Mieszko:Operatia, Zygmunt:Operatia, 
+
+Etap 2 : usuwanie
+Kazimierz 9, Boleslaw 7, 
+Kazimierz 9, Boleslaw 7, Mieszko 5, 
+Ponizej pusta planeta:
+
+
+Etap3 
+Sortowanie wektora: 
+Determia Stochasia Operatia 
+
+Etap4 
+Suma sil: 22
+

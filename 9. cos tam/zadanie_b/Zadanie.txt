@@ -1,0 +1,43 @@
+
+Zadanie polega na napisaniu klasy uogólnionej DrzewoBinarne<TWierzch>.
+Klasa reprezentuje drzewo przeszukiwań binarnych.
+Drzewo składa się z węzłów, każdy węzeł posiada wartość typu TWierzch oraz prawe i lewe dziecko (być może puste). 
+
+Klasa podstawiona za TWierzch musi implementować interfejsy IComparable<TWierzch> i IEquatable<TWierzch>
+
+Klasa DrzewoBinarne ma dwie metody: Dodaj i UsunPoddrzewo. 
+
+Metoda Dodaj dodaje nowy element w odpowiednie miejsce (jeśli w danym wierzchołku wartość jest większa od dodawanej
+wartości nową wartość należy dodać do lewego poddrzewa, a jeśli mniejsza to do prawego).
+Jeśli wartość jest już obecna w drzewie to nic nie robimy.
+
+Metoda UsunPoddrzewo usuwa wskazany element razem z całym poddrzewem.
+
+UWAGA: obie metody zwracają nowe zmodyfikowane drzewo pozostawiając stare bez zmian.
+Metody te należy napisać tak by nie kopiowały za każdym razem całego drzewa
+tylko by zachowały możliwie jak największą część starego.
+
+Należy także napisać zestaw funkcji rozszerzających klasę DrzewoBinarne.
+
+WKolejnosci - Zwraca sekwencję, której elementami są wierzchołki drzewa od najmniejszego do największego.
+Metoda ta zwraca typ IEnumerable<TWierzch>.
+
+Wypisz - wypisuje wierzchołki drzewa w kolejności od najmniejszego do największego.
+
+Szukaj - wyszukuje element w drzewie jako wynik zawraca podrzewo, którego korzeniem jest szukany węzeł.
+
+LiczbaPelnychWierzcholkow - zwraca liczbę wierzchołków, które mają po dwoje dzieci.
+
+Indeksuj - przyjmuje drzewo, w którym klasa TWierzch implementuje interfejs IIndeksowalny,
+przeszukuje drzewo wgłąb wchodząc w pierwszej kolejności zawsze do prawego poddrzewa.
+Kazdemu wierzchołkowi nadaje dwa indexy - wejścia (nr kroku w którym metoda wchodzi do wierczhołka)
+i wyjścia (nr kroku, w którym metoda wychodzi z wierzchołka).
+Do realizacji tego zadania można wykorzystać metodę rekurencyjną.
+
+Napisać klasę WierzcholekIndeksowalny<TWartosc> która może być wykorzystywana jako parametr klasy DrzewoBinarne i wspiera indeksowanie.
+Obiekty tej klasy powinny być porównywane po wartości Wartosc (wartość ta powinna być IComparable<TWartosc> i IEquatable<TWartosc>).
+
+Punktacja
+Etap 1 - 2 pkt (Dodaj, UsunPodDrzewo, WKolejnosci, Wypisz)
+Etap 2 - 1 pkt (Szukaj, LiczbaPelnychWierzcholkow)
+Etap 3 - 2 pkt (Indeksuj, klasa WierzcholekIndeksowalny)

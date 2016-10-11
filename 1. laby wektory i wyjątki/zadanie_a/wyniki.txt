@@ -1,0 +1,31 @@
+
+*** Etap I ***
+
+w1: [0]
+w2: [2,3,4]
+w3: [-2,-1,0,5]
+w4: [2,3,4]
+w1: [-2,-1,0,5]
+rozm. w1: 4
+rozm. w4: 3
+wd: [0.5,-1,0.75]
+
+*** Etap II ***
+
+w1: [7,8,9]
+w2: [2,3,4]
+w4: [7,8,9]
+w4: [9,11,13]
+w1: [7,8,0]
+w2[0]: 2
+x:     38
+
+*** Etap III ***
+
+niezgodnosc rozmiarow wektorow
+niezgodnosc rozmiarow wektorow
+indeks poza zakresem
+indeks poza zakresem
+
+*** Koniec ***
+

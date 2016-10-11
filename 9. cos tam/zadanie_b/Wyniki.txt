@@ -1,0 +1,69 @@
+
+------------Etap1--------------
+
+Test wstepny 1:    1, 
+Test wstepny 2:    3, 2, 1, 0, 
+Test wstepny 3:    
+
+Drzewo 1:
+100, 75, 65, 50, 30, 25, 15, 14, 13, 0, 
+Licznik (powinien by† 40): 40
+
+Orginalne drzewo 1 po modyfikacjach - powinno by† takie samo jak drzewo 1:
+100, 75, 65, 50, 30, 25, 15, 14, 13, 0, 
+
+Drzewo 1 po dodaniu 18 i 35 (drzewo 2)
+100, 75, 65, 50, 35, 30, 25, 18, 15, 14, 13, 0, 
+Licznik (powinien by† 48): 48
+
+Orginalne drzewo 1 po modyfikacjach - powinno by† takie samo jak drzewo 1:
+100, 75, 65, 50, 30, 25, 15, 14, 13, 0, 
+
+Drzewo 1 po dodaniu 75 - nic nie zmieniamy
+100, 75, 65, 50, 30, 25, 15, 14, 13, 0, 
+Licznik (powinien by† 49): 49
+
+Orginalne drzewo 1 po kolejnych modyfikacjach - powinno by† takie samo jak drzewo 1:
+100, 75, 65, 50, 30, 25, 15, 14, 13, 0, 
+
+Drzewo 1 po usuni©ciu wierzchoˆka 15 (drzewo 3)
+100, 75, 65, 50, 30, 25, 
+Licznik(powinien 51): 51
+
+Orginalne drzewo 1 po kolejnych modyfikacjach - powinno by† takie samo jak drzewo 1:
+100, 75, 65, 50, 30, 25, 15, 14, 13, 0, 
+
+Drzewo 1 po usuni©ciu wierzchoˆka 125 - nic nie zmieniamy
+100, 75, 65, 50, 30, 25, 15, 14, 13, 0, 
+Licznik (powinien by† 53): 53
+
+Drzewo 1 po usuni©ciu wierzchoˆka 50 - puste
+
+Licznik (powinien by† 53): 53
+
+------------Etap2--------------
+
+Orginalne drzewo 1 po modyfikacjach - powinno by† takie samo jak drzewo 1:
+100, 75, 65, 50, 30, 25, 15, 14, 13, 0, 
+
+Poddrzewo o korzeniu w 25 (drzewo 4)
+30, 25, 15, 14, 13, 0, 
+Licznik (powinien by† 53): 53
+
+Orginalne drzewo 1 po modyfikacjach - powinno by† takie samo jak drzewo 1:
+100, 75, 65, 50, 30, 25, 15, 14, 13, 0, 
+
+Drzewo o korzeniu w 125 - puste
+
+Licznik (powinien by† 53): 53
+
+Liczba peˆnych wierzchoˆk¢w w drzewie 1:  3
+Liczba peˆnych wierzchoˆk¢w w drzewie 2:  4
+Liczba peˆnych wierzchoˆk¢w w drzewie 3:  2
+Liczba peˆnych wierzchoˆk¢w w drzewie 4:  1
+
+------------Etap3--------------
+
+Indeksowanie drzewa 1
+100<10,10>, 75<8,11>, 65<9,9>, 50<1,12>, 30<6,6>, 25<2,7>, 15<3,5>, 0<4,4>, 
+

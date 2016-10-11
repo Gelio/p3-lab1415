@@ -1,0 +1,80 @@
+Federacja planet
+================
+
+W odległej galaktyce o numerze M1N1 funkcjonuje federacja planet. 
+
+Po przyjęciu do federacji kolejnej planety Samodzielny Trzygłowy Lider
+federacji planet uznał, że zarządzanie Federacją wymaga wspomagania
+komputerowego. W związku z tym zwrócił się do studentów z planety
+Ziemia o pomoc w napisaniu odpowiedniego programu.
+
+Należy napisać program, z wykorzystaniem C++ i biblioteki STL, który
+będzie realizował wymienione niżej zadania. 
+Uwaga! W tym zadaniu zabronione jest używanie jakichkolwiek jawnych
+pętli. Używamy tylko algorytmów i operacji dostarczonych w bibliotece
+STL (nagłówki <algorithm> i <numeric>.
+
+W trakcie implementacji metod określić, czy zmieniają one stan
+obiektu, czy nie i odpowiednio oznaczyć jako const.
+
+W zarządzaniu Federacją występują następujące byty:
+ - Planety
+ - Członkowie senatów planet
+
+Każda planeta składa się z:
+ - nazwy
+ - zbioru członków senatu (musi zostać zaimplementowany z użyciem
+ vector z STL). Wektor członków ma odzwierciedlać kolejność dodawania
+ ich do senatu, dodani najwcześniej z lewej, najpóźniej -- z prawej.
+
+Każdy członek senatu ma trzy cechy: 
+ - imię (string)
+ - siłę wpływów (int)
+ - nazwę planety z której pochodzi (string)
+Można założyć, że imię członka jest unikatowe.
+
+1. (2 punkty)  
+   - Napisać niezbędne konstruktory, operatory i destruktory dla planet
+     i członków senatu (Uwaga: tylko niezbędne, jeśli w danym przypadku
+     wystarczy wersja domyślna, nie implementujemy własnej)
+  - Napisać metodę dodajSenatora dla klasy Planeta
+  - Napisać metody dla klasy Planeta:
+     + void wypiszSile(ostream& out),
+     + void wypiszPochodzenie(ostream& out),
+   które dla każdego członka senatu planety wypiszą na podany strumień wyjściowy odpowiednio pary 
+     + imię członka senatu, siła wpływów
+     + imię członka senatu, nazwa planety z której pochodzi
+
+Podpowiedzi: ostream_iterator, transform, to_string
+
+2. (1 punkt)
+   Napisać następujące metody dla klasy planeta:
+    void usunIdentyczneSily(), 
+    która z wektora członków senatu usunie sąsiadujących w wektorze członków o powtarzających
+    się siłach, tak aby na liście nie pozostało żadnych dwóch
+    sąsiadujących członków o tej samej sile. Przy usuwaniu można usunąć
+    dowolnego z sąsiadów o danej sile.
+Podpowiedzi: unique
+Uwaga!! unique nie zmienia długości wektora.
+
+3. (1 punkt)
+  Utworzyć zbiór (set) i dodać do niego wszystkie planety zdefiniowane w
+  funkcji main. Planety mają być posortowane w porządku leksykograficznym sił
+  wpływów członków senatu planety (cały czas obowiązuje wcześniej
+  ustalona kolejność)
+
+4. (1 punkt)
+ Napisać metodę 
+  int pojedynekSenatow(const Planeta& b), 
+która przeprowadzi pojedynek członków senatów planet.
+
+Niech n będzie licznością mniejszego z senatów. 
+
+Dla każdego z n pierwszych członków senatu planety a (this) i analogicznego
+z planety b, porównujemy siły ich wpływów. Jeśli członek senatu z
+planety a ma większa siłę, punkt dostaje planeta a. W przeciwnym
+wypadku planeta b.
+Po odbyciu pojedynków przez n par senatorów, zwracany jest wynik:
+liczba_zwycięstw_a - liczba_zwycięstw_b
+
+Podpowiedź: inner_product

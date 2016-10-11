@@ -1,0 +1,21 @@
+==== Etap pierwszy ====
+{ LastName = Tolkien, Country = England }
+{ LastName = Stephenson, Country = USA }
+{ LastName = Troelsen, Country = USA }
+
+==== Etap drugi ====
+Pro C# 2010 and the .NET 4 Platform
+Pro VB 2010 and the .NET 4.0 Platform
+COM and .NET Interoperability
+
+==== Etap trzeci ====
+{ FirstName = John Ronald Reuel, LastName = Tolkien, Sum = 1457 }
+{ FirstName = Neal, LastName = Stephenson, Sum = 2267 }
+{ FirstName = Andrew, LastName = Troelsen, Sum = 4368 }
+
+==== Etap czwarty ====
+{ Name = Fantasy }
+{ Name = Textbook }
+{ Name = Science fiction }
+
+Press any key to continue . . .

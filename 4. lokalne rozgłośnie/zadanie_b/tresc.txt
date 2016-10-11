@@ -1,0 +1,48 @@
+Sieć lokalnych rozgłośni radiowych dysponuje pewną liczbą masztów
+nadawczych. Na każdym z masztów sieć chciałaby nadawać inną lokalną
+rozgłośnię radiową. Każda stacja radiowa jest nadawana na pewnym
+kanale częstotliwości. Wiadomo, że obszary do których docierają
+sygnały z poszczególnych masztów mogą się pokrywać. W związku z tym w
+takich przypadkach każdy z masztów powinien nadawać na innej
+częstotliwości, aby poszczególne stacje radiowe nie zakłócały się
+wzajemnie. Ponadto ze względów marketingowych stacje preferują
+nieparzyste numery kanałów. 
+
+Niech maszty będą ponumerowane kolejnymi liczbami naturalnymi. 
+Dane są obiekty klasy pozwalające sprawdzić czy dane dwa maszty mogą
+się zakłócać. 
+
+1) (1p) Napisać funkcję, która dla danej tablicy przypisań kanałów dla
+nadajników o numerach 0 do l (l <= liczba wszystkich nadajnków)
+sprawdzi czy to częściowe przypisanie nie powoduje zakłóceń 
+
+2) Napisać program, który: (4p, w tym: 2p za znalezienie poprawnego k
+i przypisania dla tego k, 2p za maksymalizację warunku)
+	- będzie znajdował minimalny zakres częstotliwości [0,k], dla
+	której  można przypisać częstotliwości masztom, tak aby nie było
+	kolizji na obszarach wspólnych. 
+	- znajdzie takie przypisanie dla minimalnego k, które
+ 	zmaksymalisuje liczbę stacji działających na nieparzystym kanale
+	- poda którym masztom należy przypisać jakie częstotliwości
+	
+
+Szkic rozwiązania:
+
+dla n=1,2,....
+ dla każdego możliwego przypisania kanałów w zakresie [0,n)
+  sprawdź czy jest poprawne, jeśli tak: zwróć rozwiązanie
+
+Dodatkowo należy uwzględnić że:
+ - poprawność rozwiązania nie gwarantuje, że maksymnalizuje ono
+ wymaganą sumę. Trzeba znaleźć wszystkie poprawne rozwiązania aby to
+ stwierdzić
+ - W generowaniu wszystkich przypisań należy przypisywać kanały
+ kolejnym masztom 0,1,2, ... i po nadaniu kanału każdemu z masztów
+ sprawdzić, czy już w częściowym przypisaniu nie wystąpił
+ konflikt. Wiadomo, że dalszych ciągów takiego przypisania nie warto
+ rozważać. 
+
+
+ 
+
+  

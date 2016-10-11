@@ -1,0 +1,45 @@
+Celem zadanie jest napisanie klasy Database implementującej prostą bazę danych.
+
+Klasa Database powinna mieć następujące publiczne metody:
+void Add<TEntity>(TEntity entity)
+void Update<TEntity>(TEntity entity)
+void Delete<TEntity>(int id)
+TEntity Get<TEntity>(int id)
+IEnumerable<TEntity> GetCollection<TEntity>()
+
+Dodawanie obiektu polega na zapisaniu zserializowanej wersji obiektu w odpowiednim pliku.
+Obiekty serializujemy przy pomocy serializacji binarnej.
+Każdy obiekt, który może być zapisany musi implementować interface IEntity a zatem mieć właściwość Id.
+Obiekt należy zapisać w pliku _baseDir\[NazwaObiektu]\[Id].dat gdzie [NazwaObiektu] to nazwa klasy reprezentującej obiekt
+(nazwę można uzyskać za pomocą metody typeof(TEntity).Name), a [Id] to identyfikator zwrócony przez właściwość Id
+zapisywanego obiektu.
+
+Jeśli Id dodawanego obiektu równe jest 0(zero) należy zmienić Id zapisywanego obiektu na wartość o 1 większą
+niż największa wartość Id do tej pory zapisanych obiektów.
+
+Dodatkowe wymagania:
+Klasa Person ma właściwość SecretPassword, która nie powinna być serializowana.
+Person zawiera właściwość FullName, która powinna być wyliczana w momencie ustawiania właściwości FirstName i LastName
+(powinna mieś wartość FirstName + " " + LastName). Właściwość ta nie powinna być serializowana.
+Jeśli jakiś katalog (dla jakiegoś typu) nie istnieje należy go utworzyć.
+Metoda GetCollection powinna odczytywać obiekty tylko jeśli jest to konieczne
+(powinno się odczytywać obiekty po jednym podczas enumerowania kolekcji).
+Klasa Order zawiera właściwość SerializationCounter, która powinna być zwiększana o 1 za każdym razem
+gdy obiekt jest serializowany (wartość jest zapisywana).
+Instancje klasy Order można utworzyć tylko przekazując instancję klasy Person, która ma ustawioną właściwość
+SecretPassword na wartość "yabba dabba doo".
+
+Wskazówki:
+- Sprawdzić czy katalog istnieje można za pomocą metody: Directory.Exists([scieżka])
+- Wszystkie pliki z katalogu można pobrać za pomocą metody: Directory.GetFiles([ścieżka])
+- Utworzyć katalog można za pomocą metody: Directory.CreateDirectory([ścieżka])
+- Ścieżkę można skonstruować z kilku elementow za pomocą metody: Path.Combine([pierwsza część], [druga część])
+- Sprawdzić czy plik istnieje można za pomocą metody: File.Exists([ścieżka])
+- Usunąć plik można za pomocą metody: File.Delete([ścieżka])
+- Nazwe pliku ze ścieżki można pobrać za pomocą Path.GetFileName([ścieżka])
+
+Punktacja
+- Add, Get, Person     -  2.0
+- Update,              -  0.5
+- GetCollection        -  1.5
+- obsluga id==0        -  1.0

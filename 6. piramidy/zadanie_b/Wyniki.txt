@@ -1,0 +1,63 @@
+=== ETAP 1 ===
+     w
+    www
+   wwwww
+  wwwwwww
+ wwwwwwwww
+wwwwwwwwwww
+
+     M
+    MMM
+   MMMMM
+  MMMMMMM
+ MMMMMMMMM
+MMMMMMMMMMM
+
+  S
+ SSS
+SSSSS
+
+     Z
+    ZZZ
+   ZZZZZ
+  ZZZZZZZ
+ ZZZZZZZZZ
+ZZZZZZZZZZZ
+
+
+=== ETAP 2 ===
+Out material: M
+
+     M
+    MMM
+   MMMMM
+  MMMMMMM
+ MMMMMMMMM
+MMMMMMMMMMM
+
+Out material: M
+
+  M
+ MMM
+MMMMM
+
+=== ETAP 3 ===
+ c
+ccc
+
+ w
+www
+
+     c
+    ccc
+   ccccc
+  ccccccc
+ ccccccccc
+ccccccccccc
+
+     w
+    www
+   wwwww
+  wwwwwww
+ wwwwwwwww
+wwwwwwwwwww

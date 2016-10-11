@@ -1,0 +1,42 @@
+=== ETAP 1 ===
+SlowInt Equals Started
+SlowInt Add Started
+SlowInt LowerThen Started
+SlowInt LowerThen Ended
+SlowInt Equals Ended
+SlowInt Add Ended
+
+Results: False,   10,   True
+
+SlowInt Equals Started
+SlowInt Equals Ended
+SlowInt Add Started
+SlowInt Add Ended
+SlowInt LowerThen Started
+SlowInt LowerThen Ended
+
+Results: True,   15,   True
+
+=== ETAP 2 ===
+SlowInt Add Started
+SlowInt Add Ended
+SlowInt Add Started
+SlowInt Add Ended
+SlowInt Add Started
+SlowInt Add Ended
+SlowInt Add Started
+SlowInt Add Ended
+
+Results: 23,   1770
+
+=== ETAP 3 ===
+SlowInt Max Started
+SlowInt Max Started
+SlowInt Max Ended
+SlowInt Max Ended
+SlowInt Max Started
+SlowInt Max Ended
+
+Results: 12,   59
+
+Press any key to continue . . .

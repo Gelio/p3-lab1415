@@ -1,0 +1,74 @@
+=== ETAP 1 ===
+    o
+   ooo
+  ooooo
+ ooooooo
+ooooooooo
+
+    M
+   MMM
+  MMMMM
+ MMMMMMM
+MMMMMMMMM
+
+  S
+ SSS
+SSSSS
+
+    Z
+   ZZZ
+  ZZZZZ
+ ZZZZZZZ
+ZZZZZZZZZ
+
+
+=== ETAP 2 ===
+Out material: o
+
+            o
+           ooo
+          ooooo
+         ooooooo
+        ooooooooo
+       ooooooooooo
+      ooooooooooooo
+     ooooooooooooooo
+    ooooooooooooooooo
+   ooooooooooooooooooo
+  ooooooooooooooooooooo
+ ooooooooooooooooooooooo
+ooooooooooooooooooooooooo
+
+Out material: S
+
+       S
+      SSS
+     SSSSS
+    SSSSSSS
+   SSSSSSSSS
+  SSSSSSSSSSS
+ SSSSSSSSSSSSS
+SSSSSSSSSSSSSSS
+
+=== ETAP 3 ===
+   C
+  CCC
+ CCCCC
+CCCCCCC
+
+   o
+  ooo
+ ooooo
+ooooooo
+
+    C
+   CCC
+  CCCCC
+ CCCCCCC
+CCCCCCCCC
+
+    o
+   ooo
+  ooooo
+ ooooooo
+ooooooooo

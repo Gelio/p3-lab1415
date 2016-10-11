@@ -1,0 +1,103 @@
+﻿
+PO - lab_10
+
+TEMAT: Poszukiwanie minimum funkcji jednowymiarowej w zadanym przedziale.
+       (m.Bisekcji oraz m.Newtona)
+       Funkcje definiowane są w postaci wielomianów lub funkcji klasy C2.
+
+0) Dane są definicje delegacji:
+   delegate double Function(double x);
+   delegate double Algorytm1(Function p1, double a, double b);
+   delegate double Algorytm2(Function p1, Function p2, double a);
+
+
+1) ETAP 1 (1pkt) - formuła wielomianu, formuła 1-ej pochodnej oraz formuła 2-ej pochodnej.
+
+   Zdefiniować typ Pol (reprezentujący wielomian),
+   wymagane składowe:
+    - konstruktor z parametrem double[] - tablica współczynników
+    - metoda Diff1 zwracająca typ Pol, wielomian będący pierwszą pochodną
+    - metoda Diff2 zwracająca typ Pol, wielomian będący drugą pochodną
+    oraz juz zrobione
+    - prywatne pole a - tablica współczynników (double[])
+    - metoda ToString()	- dla danej tablicy wsp. opis wielomianu w formie:
+        1*x^3 + -5*x^2 + 5*x^1 + -10
+
+   W funkcji Main (class Test) wypisać formę wielomianu, oraz jego 1-ej pochodnej i 2-giej pochodnej.
+
+    P(x) = 1*x^3 + -5*x^2 + 5*x^1 + -10
+   P1(x) = 3*x^2 + -10*x^1 + 5
+   P2(x) = 6*x^1 + -10
+
+
+2) ETAP 2 (1 pkt) - wartości: wielomianu, 1-ej pochodnej (dokładna oraz przybliżona),
+                    2-ej pochodnej (dokładna oraz przybliżona).	
+
+   w klasie Pol zdefiniuj:
+    - metoda Horner - obliczanie wartości wielomianu dla zadanego argumentu x (double),
+       zastosować schemat Hornera (metoda zgodna z typem Function)
+
+   w klasie Test zdefiniuj:
+    - (statyczna) metoda Diff1 - zwracająca delegata (zgodnego z typem Function)
+      obliczającego przybliżoną wartość 1-ej pochodnej wg wzoru:
+          (f(x+eps)-f(x-eps))/(2*eps), gdzie eps=1e-3;
+    - (statyczna) metoda Diff2 - zwracająca delegata (zgodnego z typem Function)
+      obliczającego przybliżoną wartość 2-ej pochodnej wg wzoru:
+          (f(x+eps)-2*f(x)+f(x-eps))/(eps*eps), gdzie eps=j.w.
+
+   W funkcji Main wypisz wartosci wielomianu, 1-ej pochodnej (dokł. oraz przybl.)
+      i 2-ej pochodnej (dokł. oraz przybl.) dla x=2.
+
+
+3) ETAP 3 (1 pkt)
+   w klasie Test dane są:
+    - metoda static double Bisection(Function p1, double a, double b)
+      zgodna z typem Algorytm1, gdzie p1 definiuje 1-szą pochodną;
+    - metoda static double Newton(Function p1, Function p2, double a)
+      zgodna z typem Algorytm2, gdzie p1,p2 definiują odpowiednie pochodne;
+
+   3A) Dla wielomianu P znajdź minimum funkcji wywołując te dwa algorytmy.
+       Dla obliczenia pochodnych wykorzystaj dokładne wartości pochodnych.
+       Przyjmij a=2, b=4.
+   3B) Wykonaj to samo, co w punkcie 3A, ale w tym celu wykorzystaj
+       pzybliżone wartości pochodnych.
+
+
+4) ETAP 4 (1 pkt)
+   w klasie Pol zdefiniowac operator dowawania wielomianów (być może różnych stopni),
+   operator zwraca nowy wielomian będący sumą wielomianów argumentów.
+
+   w klasie Test zdefiniować metodę statyczną o nazwie Suma,
+   zwracającą delegata funkcji realizującej sumę dowolnej liczby 
+   zadanych funkcji opisanych delegatami Function.
+
+   - zdefiniuj sumę wielomianów (zastosuj operator):
+     f1(x)=x^3, f2(x)=-5*x^2, f3(x)=5*x-10 i zastosuj alg. Bisection dla a=2,b=4;
+     (zastosuj dokładną pochodną)
+
+   - zdefiniuj sumę (zastosuj Suma) funkcji dla wielomianów:
+     f1(x)=x^3, f2(x)=-5*x^2, f3(x)=5*x-10 i zastosuj alg. Bisection dla a=2,b=4;
+     (zastosuj przybliżoną pochodną)
+
+
+5) ETAP 5 (1 pkt)
+
+   a=0, b=4
+    - zdefiniuj funkcję f(x)=2-4x+exp(x) jako metodę anonimową
+      i wywołaj algorytmy Bisection i Newton;
+
+   a=0, b=4
+    - zdefiniuj funkcję f(x)=2-4x+exp(x) jako wyrażenie lambda
+      i wywołaj algorytmy Bisection i Newton;
+
+   a=0, b=4
+    - zdefiniuj funkcję f(x)=2-4x+exp(x) jako sumę (zastosuj Suma)
+      dwóch wyrażeń lambda:  2-4x  oraz  exp(x)
+      i wywołaj algorytmy Bisection i Newton;
+
+    Oczywiście za każdym razem podaj znalezione minima.
+
+
+
+
+

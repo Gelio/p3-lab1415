@@ -1,0 +1,20 @@
+
+Etap1 
+Mieszko 5, Boleslaw 7, Kazimierz 9, Zygmunt 9, 
+Marvin 9, Paragrafor 7, E.T. 4, 
+Mieszko:Operatia, Boleslaw:Stochasia, Kazimierz:Stochasia, Zygmunt:Stochasia, 
+
+Etap 2 : usuwanie
+Mieszko 5, Boleslaw 7, Kazimierz 9, 
+Mieszko 5, Boleslaw 7, Kazimierz 9, Mieszko 5, Mieszko 5, Boleslaw 7, Boleslaw 7, Kazimierz 9, Kazimierz 9, 
+Mieszko 5, Boleslaw 7, Kazimierz 9, Mieszko 5, Boleslaw 7, Kazimierz 9, 
+
+Etap3 
+posortowany zbior: 
+Determia Operatia Stochasia 
+
+Etap4 
+Pojedynek 1: 1
+Pojedynek 2: -1
+Pojedynek 3: 1
+
