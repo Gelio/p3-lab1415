@@ -11,7 +11,7 @@ private:
     const std::string imie;
     const std::string pochodzenie;
 public:
-    Senator(int moc, std::string imie, std::string pochodzenie);
+	Senator(int moc, std::string imie, std::string pochodzenie) : sila(moc), imie(imie), pochodzenie(pochodzenie) { };
 
     inline int getSila() const {return sila;}
     inline const std::string& getImie() const {return imie;}

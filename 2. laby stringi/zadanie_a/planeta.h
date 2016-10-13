@@ -6,15 +6,20 @@
 
 #include "senator.h"
 
+class KomparatorSenatorow {
+public:
+	bool operator()(const Senator& s1, const Senator& s2);
+};
+
 class Planeta
 {
 private:
   // nie modyfikujemy definicji tego pola
     const std::string nazwa;
 
-    std::set<Senator> senat;
+    std::set<Senator, KomparatorSenatorow> senat;
 public:
-    Planeta(const std::string& nazwa);
+	Planeta(const std::string& nazwa) : nazwa(nazwa) { };
 
     void dodajSenatora(const Senator& senator);
 

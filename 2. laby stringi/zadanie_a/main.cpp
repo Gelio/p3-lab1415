@@ -17,7 +17,7 @@ int main()
      * lub zmodyfikować tworzenie zbioru w klasie Planeta. Oba rozwiązania są dopuszcalne
      */
     cout << endl << "Etap1 " << endl;
-/*
+
     Senator senators1(5, "Mieszko", "Operatia");
     Senator senators2(7, "Boleslaw", "Stochasia");
     Senator senators3(9, "Kazimierz", "Stochasia");
@@ -55,10 +55,10 @@ int main()
 
     stochasia.wypiszPochodzenie(cout);
     cout << endl;
-*/
+
     //Etap 2
     cout << endl << "Etap 2 : usuwanie" << endl;
-/*
+
 
     Planeta nowa = stochasia; // Wywyołanie konstruktora kopiującego!
     nowa.usunSlabych(6);
@@ -71,7 +71,7 @@ int main()
     nowa2.usunSlabych(10);
     nowa2.wypiszSile(cout);
     cout << endl;
-*/
+
 
     //Etap 3
     cout << endl << "Etap3 " << endl;
@@ -79,8 +79,20 @@ int main()
     //Napisać: utworzenie wektora
     // dodanie do niego trzech planet w koolejności deklaracji w main
     // posortowanie wektora
+	vector<Planeta> galaktyka;
+	galaktyka.push_back(stochasia);
+	galaktyka.push_back(operatia);
+	galaktyka.push_back(determia);
 
     cout << "Sortowanie wektora: " << endl;
+
+	vector<string> nazwy;
+	transform(galaktyka.begin(), galaktyka.end(), back_inserter(nazwy),
+		[](const Planeta& p) -> string {
+			return p.getNazwa();
+		});
+	sort(nazwy.begin(), nazwy.end());
+	transform(nazwy.begin(), nazwy.end(), ostream_iterator<string>(cout, " "), identity<string>());
 
     //Tu wypisać jako wynik same nazwy planet (w kolejności wystąpień w wektorze)
     // uzywając ostream_iterator i transform
@@ -89,9 +101,9 @@ int main()
 
     //Etap 5
     cout << endl << "Etap4 " << endl;
-/*
+
     cout << "Suma sil: " << stochasia.sumaSil() << endl;
-*/
+
     cout << endl;
     return 0;
 }

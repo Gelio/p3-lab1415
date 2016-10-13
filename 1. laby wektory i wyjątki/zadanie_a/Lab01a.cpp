@@ -12,37 +12,37 @@ void main()
 
     cout << endl << "*** Etap I ***" << endl << endl;
 
-    //Wektor<int> w1(1);
-    //const Wektor<int> w2(3,tab3);
-    //const Wektor<int> w3(4,tab4);
-    //Wektor<int> w4=w2;
-    //Wektor<double> wd(3,tabd);
+    Wektor<int> w1(1);
+    const Wektor<int> w2(3,tab3);
+    const Wektor<int> w3(4,tab4);
+    Wektor<int> w4=w2;
+    Wektor<double> wd(3,tabd);
 
-    //cout << "w1: " << w1 << endl;
-    //cout << "w2: " << w2 << endl;
-    //cout << "w3: " << w3 << endl;
-    //cout << "w4: " << w4 << endl;
-    //w1=w3;
-    //cout << "w1: " << w1 << endl;
-    //cout << "rozm. w1: " << w1.Rozm() << endl;
-    //cout << "rozm. w4: " << w4.Rozm() << endl;
-    //cout << "wd: " << wd << endl;
+    cout << "w1: " << w1 << endl;
+    cout << "w2: " << w2 << endl;
+    cout << "w3: " << w3 << endl;
+    cout << "w4: " << w4 << endl;
+    w1=w3;
+    cout << "w1: " << w1 << endl;
+    cout << "rozm. w1: " << w1.Rozm() << endl;
+    cout << "rozm. w4: " << w4.Rozm() << endl;
+    cout << "wd: " << wd << endl;
 
     cout << endl << "*** Etap II ***" << endl << endl;
 
-    //w1=w2+5;
-    //cout << "w1: " << w1 << endl;
-    //cout << "w2: " << w2 << endl;
-    //w4+=5;
-    //cout << "w4: " << w4 << endl;
-    //w4=w1+w2;
-    //cout << "w4: " << w4 << endl;
-    //w1[2]=0;
-    //cout << "w1: " << w1 << endl;
-    //cout << "w2[0]: " << w2[0] << endl;
-    //int x;
-    //x=w1*w2;
-    //cout << "x:     " << x << endl;
+    w1=w2+5;
+    cout << "w1: " << w1 << endl;
+    cout << "w2: " << w2 << endl;
+    w4+=5;
+    cout << "w4: " << w4 << endl;
+    w4=w1+w2;
+    cout << "w4: " << w4 << endl;
+    w1[2]=0;
+    cout << "w1: " << w1 << endl;
+    cout << "w2[0]: " << w2[0] << endl;
+    int x;
+    x=w1*w2;
+    cout << "x:     " << x << endl;
 
     cout << endl << "*** Etap III ***" << endl << endl;
 

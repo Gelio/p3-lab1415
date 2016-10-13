@@ -1,0 +1,6 @@
+﻿  Lab01a.cpp
+Lab01a.cpp(38): error C2679: binary '+': no operator found which takes a right-hand operand of type 'const Wektor<int>' (or there is no acceptable conversion)
+  d:\studia\programowanie\programowanie 3 - zaawansowane\lab2014_15\1. laby wektory i wyjątki\zadanie_a\wektor.h(91): note: could be 'Wektor<int> operator +<int>(const Wektor<int> &,int)'
+  Lab01a.cpp(38): note: while trying to match the argument list '(Wektor<int>, const Wektor<int>)'
+Lab01a.cpp(40): error C2106: '=': left operand must be l-value
+Lab01a.cpp(44): error C2676: binary '*': 'Wektor<int>' does not define this operator or a conversion to a type acceptable to the predefined operator
