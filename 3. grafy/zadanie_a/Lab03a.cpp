@@ -60,26 +60,26 @@ void main()
     cout << endl ;
     cout << "***** Etap 3 *****" << endl ;  // 1 pkt
     cout << endl ;
-    //g=g2;
-    //g2=Graph::Reverse(g);
-    //cout << "Graf odwrotny do g" << endl ;
-    //cout << g2 ;
+    g=g2;
+    g2=Graph::Reverse(g);
+    cout << "Graf odwrotny do g" << endl ;
+    cout << g2 ;
 
     cout << endl ;
     cout << "***** Etap 4 *****" << endl ;  // 1 pkt
     cout << endl ;
-    //ifstream f;
-    //f.open("Graph.txt");
-    //if ( f.fail() )
-    //    cout << "Blad otwarcia pliku Graph.txt" << endl ;
-    //else
-    //    {
-    //    g.AddNode(30);
-    //    f>>g;
-    //    f.close();
-    //    cout << "Graf wczytany z pliku" << endl ;
-    //    cout << g ;
-    //    }
+    ifstream f;
+    f.open("Graph.txt");
+    if ( f.fail() )
+        cout << "Blad otwarcia pliku Graph.txt" << endl ;
+    else
+        {
+        g.AddNode(30);
+        f>>g;
+        f.close();
+        cout << "Graf wczytany z pliku" << endl ;
+        cout << g ;
+        }
 
     cout << endl ;
     cout << "***** Koniec *****" << endl ;

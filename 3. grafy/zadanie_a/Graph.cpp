@@ -73,7 +73,22 @@ bool Graph::DelEdge(int n1, int n2) {
 
 Graph Graph::Reverse(const Graph& g) {
 	// tworzy Graph z odworoconymi kierunkami krawedzi
-	return Graph();
+	Graph reversed;
+
+	// Add nodes
+	for_each(g.nodes.begin(), g.nodes.end(),
+		[&reversed](const pair<int, map<int, int>>& node) {
+			reversed.AddNode(node.first);
+	});
+
+	for_each(g.nodes.begin(), g.nodes.end(),
+		[&reversed](const pair<int, map<int, int>>& node) {
+			for_each(node.second.begin(), node.second.end(),
+				[&reversed, destination=node.first](const pair<int, int>& edge) {
+					reversed.AddEdge(edge.first, destination, edge.second);
+			});
+	});
+	return reversed;;
 }
 
 ostream& operator<<(ostream &out, const Graph& g) {
@@ -92,5 +107,6 @@ ostream& operator<<(ostream &out, const Graph& g) {
 
 istream& operator>>(istream &in, Graph& g) {
 	// format danych wejsciowych taki jak wyjscie poprzedniej funkcji
+	// TODO
 	return in;
 }
