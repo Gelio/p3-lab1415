@@ -1,3 +1,4 @@
 ﻿  Graph.cpp
-  Grafy.vcxproj -> C:\Programowanie\studia\p3-lab1415\3. grafy\zadanie_a\Debug\Grafy.exe
-  Grafy.vcxproj -> C:\Programowanie\studia\p3-lab1415\3. grafy\zadanie_a\Debug\Grafy.pdb (Full PDB)
+Graph.cpp(113): warning C4101: 'edgeCost': unreferenced local variable
+Graph.cpp(113): warning C4101: 'destinationNode': unreferenced local variable
+  Grafy.vcxproj -> D:\Studia\Programowanie\Programowanie 3 - zaawansowane\lab2014_15\3. grafy\zadanie_a\Debug\Grafy.exe

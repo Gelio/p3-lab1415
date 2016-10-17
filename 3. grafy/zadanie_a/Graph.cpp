@@ -2,6 +2,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 #include <algorithm>
 #include <iterator>
+#include <sstream>
 #include "Graph.h"
 
 // Tu dopisz implementacje
@@ -108,5 +109,15 @@ ostream& operator<<(ostream &out, const Graph& g) {
 istream& operator>>(istream &in, Graph& g) {
 	// format danych wejsciowych taki jak wyjscie poprzedniej funkcji
 	// TODO
+	string line;
+	int sourceNode, destinationNode, edgeCost;
+
+	cout << "wczytuje" << endl;
+	while (!getline(in, line)) {
+		cout << "linia " << line << endl;
+		sourceNode = atoi(line.substr(0, 2).c_str());
+		cout << sourceNode;
+	}
+
 	return in;
 }
