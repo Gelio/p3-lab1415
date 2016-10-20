@@ -1,2 +1,4 @@
 ﻿  calculatechannel.cpp
+calculatechannel.cpp(38): warning C4018: '<': signed/unsigned mismatch
+calculatechannel.cpp(61): warning C4018: '<': signed/unsigned mismatch
   Lokalne rozgłośnie.vcxproj -> D:\Studia\Programowanie\Programowanie 3 - zaawansowane\lab2014_15\4. lokalne rozgłośnie\zadanie_a\Debug\Lokalne rozgłośnie.exe
