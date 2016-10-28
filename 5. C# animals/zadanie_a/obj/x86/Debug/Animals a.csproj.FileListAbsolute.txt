@@ -1,0 +1,5 @@
+D:\Studia\Programowanie\Programowanie 3 - zaawansowane\lab2014_15\5. C# animals\zadanie_a\bin\Debug\ConsoleApplication.exe
+D:\Studia\Programowanie\Programowanie 3 - zaawansowane\lab2014_15\5. C# animals\zadanie_a\bin\Debug\ConsoleApplication.pdb
+D:\Studia\Programowanie\Programowanie 3 - zaawansowane\lab2014_15\5. C# animals\zadanie_a\obj\x86\Debug\Animals a.csprojResolveAssemblyReference.cache
+D:\Studia\Programowanie\Programowanie 3 - zaawansowane\lab2014_15\5. C# animals\zadanie_a\obj\x86\Debug\ConsoleApplication.exe
+D:\Studia\Programowanie\Programowanie 3 - zaawansowane\lab2014_15\5. C# animals\zadanie_a\obj\x86\Debug\ConsoleApplication.pdb
