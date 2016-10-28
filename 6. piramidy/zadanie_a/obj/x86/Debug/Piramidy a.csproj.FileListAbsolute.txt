@@ -1,0 +1,4 @@
+D:\Studia\Programowanie\Programowanie 3 - zaawansowane\lab2014_15\6. piramidy\zadanie_a\bin\Debug\ConsoleApplication.exe
+D:\Studia\Programowanie\Programowanie 3 - zaawansowane\lab2014_15\6. piramidy\zadanie_a\bin\Debug\ConsoleApplication.pdb
+D:\Studia\Programowanie\Programowanie 3 - zaawansowane\lab2014_15\6. piramidy\zadanie_a\obj\x86\Debug\ConsoleApplication.exe
+D:\Studia\Programowanie\Programowanie 3 - zaawansowane\lab2014_15\6. piramidy\zadanie_a\obj\x86\Debug\ConsoleApplication.pdb
