@@ -22,26 +22,26 @@ namespace Lab8
         {
             Console.WriteLine("=== Etap 1 ===\n");
 
-            //IEnumerable naturals = new Naturals();
-            //Console.WriteLine("Natural numbers");
-            //PrintIEnumerable(naturals, 10);
+            IEnumerable naturals = new Naturals();
+            Console.WriteLine("Natural numbers");
+            PrintIEnumerable(naturals, 10);
 
-            //IEnumerable random = new RandomNumbers(665,1000);
-            //Console.WriteLine("Random numbers");
-            //PrintIEnumerable(random, 10);
+            IEnumerable random = new RandomNumbers(665, 1000);
+            Console.WriteLine("Random numbers");
+            PrintIEnumerable(random, 10);
 
-            //IEnumerable tribonacci = new Tribonacci();
-            //Console.WriteLine("Tribonacci numbers");
-            //PrintIEnumerable(tribonacci, 10);
+            IEnumerable tribonacci = new Tribonacci();
+            Console.WriteLine("Tribonacci numbers");
+            PrintIEnumerable(tribonacci, 10);
 
-            //IEnumerable catalan = new Catalan();
-            //Console.WriteLine("Catalan numbers");
-            //PrintIEnumerable(catalan, 10);
+            IEnumerable catalan = new Catalan();
+            Console.WriteLine("Catalan numbers");
+            PrintIEnumerable(catalan, 10);
 
-            //int[] arr1 = {56, 6, -9, 1};
-            //IEnumerable polynomial = new Polynomial(arr1);
-            //Console.WriteLine("Polynomial values");
-            //PrintIEnumerable(polynomial, 10);
+            int[] arr1 = { 56, 6, -9, 1 };
+            IEnumerable polynomial = new Polynomial(arr1);
+            Console.WriteLine("Polynomial values");
+            PrintIEnumerable(polynomial, 10);
 
             Console.WriteLine("=== Etap 2 ===\n");
 
@@ -49,11 +49,11 @@ namespace Lab8
             //Console.WriteLine(first5.Name);
             //PrintIEnumerable(first5.Modify(random));
 
-            //IModifier linear = new LinearTransform(10,5);
+            //IModifier linear = new LinearTransform(10, 5);
             //Console.WriteLine(linear.Name);
-            //PrintIEnumerable(linear.Modify(naturals),10);
+            //PrintIEnumerable(linear.Modify(naturals), 10);
 
-            //int[] arr2 = { 3,1,2,2,2,5,5,4,2,1,3,2,4,4,4 };
+            //int[] arr2 = { 3, 1, 2, 2, 2, 5, 5, 4, 2, 1, 3, 2, 4, 4, 4 };
             //IModifier unique = new Unique();
             //Console.WriteLine(unique.Name);
             //PrintIEnumerable(unique.Modify(arr2));
