@@ -5,14 +5,15 @@ namespace Lab8
 {
     class Naturals : IEnumerable
     {
-        private int nextNumber;
+        private int startingNumber;
 
-        public Naturals(int _nextNumber = 0)
+        public Naturals(int _startingNumber = 0)
         {
-            nextNumber = _nextNumber;
+            startingNumber= _startingNumber;
         }
         public IEnumerator GetEnumerator()
         {
+            int nextNumber = startingNumber;
             while (true)
                 yield return nextNumber++;
         }
@@ -86,25 +87,40 @@ namespace Lab8
     class Polynomial : IEnumerable
     {
         private int[] coefficients;
-        private IEnumerator x;
 
         public Polynomial(int[] _coefficients)
         {
             coefficients = _coefficients;
-            Naturals naturalNumbers = new Naturals();
-            x = naturalNumbers.GetEnumerator();
         }
 
         public IEnumerator GetEnumerator()
         {
-            while (true)
+            Naturals naturalNumbers = new Naturals();
+            foreach (int x in naturalNumbers)
             {
-                x.MoveNext();
                 int y = 0;
-                for (int i = coefficients.Length-1; i >= 0; --i)
-                    y = y * (int)x.Current + coefficients[i];
+                for (int i = coefficients.Length - 1; i >= 0; --i)
+                    y = y * x + coefficients[i];
 
                 yield return y;
+            }
+        }
+    }
+
+    class MultiplicationTable : IEnumerable
+    {
+        private int n;
+        public MultiplicationTable(int _n = 5)
+        {
+            n = _n;
+        }
+
+        public IEnumerator GetEnumerator()
+        {
+            IEnumerable baseNumbers = new FirstN(n).Modify(new Naturals(1));
+            for (int i=1; i <= n; i++)
+            {
+                yield return new LinearTransform(i, 0).Modify(baseNumbers);
             }
         }
     }
