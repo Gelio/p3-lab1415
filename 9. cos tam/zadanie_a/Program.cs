@@ -110,19 +110,19 @@ namespace PO_BST
 
             Console.WriteLine("\n------------Etap3--------------");
 
-            //var root2 = BinarySearchTree<IndexableNode<int>>.SingleNode(new IndexableNode<int>(50))
-            //    .Add(new IndexableNode<int>(25))
-            //    .Add(new IndexableNode<int>(15))
-            //    .Add(new IndexableNode<int>(0))
-            //    .Add(new IndexableNode<int>(30))
-            //    .Add(new IndexableNode<int>(75))
-            //    .Add(new IndexableNode<int>(65))
-            //    .Add(new IndexableNode<int>(100));
+            var root2 = BinarySearchTree<IndexableNode<int>>.SingleNode(new IndexableNode<int>(50))
+                .Add(new IndexableNode<int>(25))
+                .Add(new IndexableNode<int>(15))
+                .Add(new IndexableNode<int>(0))
+                .Add(new IndexableNode<int>(30))
+                .Add(new IndexableNode<int>(75))
+                .Add(new IndexableNode<int>(65))
+                .Add(new IndexableNode<int>(100));
 
-            //Console.WriteLine("\nIndeksowanie drzewa 1");
-            //root2.Index();
-            //root2.Write();
-            //Console.WriteLine();
-		}
+            Console.WriteLine("\nIndeksowanie drzewa 1");
+            root2.IndexTree();
+            root2.Write();
+            Console.WriteLine();
+        }
 	}
 }

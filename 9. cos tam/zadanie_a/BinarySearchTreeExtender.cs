@@ -55,5 +55,30 @@ namespace PO_BST
 
             return tree.Left.NumberOfLeaves() + tree.Right.NumberOfLeaves();
         }
+        
+        static public void IndexTree<TNode>(this BinarySearchTree<TNode> tree, int currentStep = 1) where TNode : IComparable<TNode>, IEquatable<TNode>, IIndexable
+        {
+            if (tree == null)
+                return;
+
+            tree.Value.EntryIndex = currentStep;
+
+            if (tree.Left != null)
+            {
+                tree.Left.IndexTree(currentStep + 1);
+                currentStep = tree.Left.Value.ExitIndex + 1;
+            }
+                
+            if (tree.Right != null)
+            {
+                if (tree.Left != null)
+                    tree.Right.IndexTree(currentStep);
+                else
+                    tree.Right.IndexTree(currentStep + 1);
+                currentStep = tree.Right.Value.ExitIndex + 1;
+            }
+                
+            tree.Value.ExitIndex = currentStep;
+        }
     }
 }

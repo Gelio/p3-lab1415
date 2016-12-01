@@ -11,8 +11,8 @@ namespace PO_BST
 
 // Klasę IndexableNode należy uzupełnić
 
-	public class IndexableNode<TValue> : IIndexable
-	{
+	public class IndexableNode<TValue> : IIndexable, IComparable<IndexableNode<TValue>>, IEquatable<IndexableNode<TValue>> where TValue : IComparable<TValue>, IEquatable<TValue>
+    {
 		private readonly TValue _value;
 		public IndexableNode(TValue value)
 		{
@@ -29,6 +29,16 @@ namespace PO_BST
 		{
 			return string.Format("{0}<{1},{2}>", Value, EntryIndex, ExitIndex);
 		}
+
+        public int CompareTo(IndexableNode<TValue> node)
+        {
+            return Value.CompareTo(node.Value);
+        }
+
+        public bool Equals(IndexableNode<TValue> node)
+        {
+            return Value.Equals(node.Value);
+        }
 	}
 
 }
