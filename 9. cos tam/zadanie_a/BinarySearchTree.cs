@@ -30,51 +30,51 @@ namespace PO_BST
 
 		public BinarySearchTree<TNode> Add(TNode value)
 		{
-            int comparisonResult = value.CompareTo(_value);
+            int comparisonResult = value.CompareTo(Value);
             if (comparisonResult == 0)
                 return this;
 
             if (comparisonResult < 0)
             {
                 // value < _value
-                if (_left == null)
+                if (Left == null)
                     return new BinarySearchTree<TNode>(Value, SingleNode(value), Right);
-                return new BinarySearchTree<TNode>(Value, _left.Add(value), Right);
+                return new BinarySearchTree<TNode>(Value, Left.Add(value), Right);
             }
             else
             {
                 // value > _value
-                if (_right == null)
+                if (Right == null)
                     return new BinarySearchTree<TNode>(Value, Left, SingleNode(value));
-                return new BinarySearchTree<TNode>(Value, Left, _right.Add(value));
+                return new BinarySearchTree<TNode>(Value, Left, Right.Add(value));
             }
 		}
 
 		public BinarySearchTree<TNode> RemoveSubTree(TNode value)
 		{
-			int comparisonResult = value.CompareTo(_value);
+			int comparisonResult = value.CompareTo(Value);
             if (comparisonResult == 0)
                 return null;
             
             if (comparisonResult < 0)
             {
-                if (_left == null)
+                if (Left == null)
                     return this;
 
-                if (_left.Value.CompareTo(value) == 0)
+                if (Left.Value.CompareTo(value) == 0)
                     return new BinarySearchTree<TNode>(Value, null, Right);
 
-                return new BinarySearchTree<TNode>(Value, _left.RemoveSubTree(value), Right);
+                return new BinarySearchTree<TNode>(Value, Left.RemoveSubTree(value), Right);
             }
             else
             {
-                if (_right == null)
+                if (Right == null)
                     return this;
 
-                if (_right.Value.CompareTo(value) == 0)
+                if (Right.Value.CompareTo(value) == 0)
                     return new BinarySearchTree<TNode>(Value, Left, null);
 
-                return new BinarySearchTree<TNode>(Value, Left, _right.RemoveSubTree(value));
+                return new BinarySearchTree<TNode>(Value, Left, Right.RemoveSubTree(value));
             }
 		}
 
