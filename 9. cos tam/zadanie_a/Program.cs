@@ -19,70 +19,70 @@ namespace PO_BST
 
 			Console.WriteLine("\n------------Etap1--------------");
 
-            //Console.Write("\nTest wstepny 1:    ");
-            //var root0 = BinarySearchTree<int>.SingleNode(1);
-            //foreach (var n in root0.InOrder())
-            //    Console.Write("{0}, ", n);
-            //Console.Write("\nTest wstepny 2:    ");
-            //root0=root0.Add(2).Add(3).Add(0);
-            //foreach (var n in root0.InOrder())
-            //    Console.Write("{0}, ", n);
-            //Console.Write("\nTest wstepny 3:    ");
-            //root0=null;
-            //foreach (var n in root0.InOrder())
-            //    Console.Write("{0}, ", n);
-            //Console.WriteLine();
+            Console.Write("\nTest wstepny 1:    ");
+            var root0 = BinarySearchTree<int>.SingleNode(1);
+            foreach (var n in root0.InOrder())
+                Console.Write("{0}, ", n);
+            Console.Write("\nTest wstepny 2:    ");
+            root0 = root0.Add(2).Add(3).Add(0);
+            foreach (var n in root0.InOrder())
+                Console.Write("{0}, ", n);
+            Console.Write("\nTest wstepny 3:    ");
+            root0 = null;
+            foreach (var n in root0.InOrder())
+                Console.Write("{0}, ", n);
+            Console.WriteLine();
 
-            //var root = BinarySearchTree<int>.SingleNode(50)
-            //    .Add(25)
-            //    .Add(15)
-            //    .Add(14)
-            //    .Add(17)
-            //    .Add(0)
-            //    .Add(30)
-            //    .Add(75)
-            //    .Add(65)
-            //    .Add(70)
-            //    .Add(100);
+            var root = BinarySearchTree<int>.SingleNode(50)
+                .Add(25)
+                .Add(15)
+                .Add(14)
+                .Add(17)
+                .Add(0)
+                .Add(30)
+                .Add(75)
+                .Add(65)
+                .Add(70)
+                .Add(100);
 
-            //Console.WriteLine("\nDrzewo 1:");
-            //root.Write();
-            //Console.WriteLine("Licznik (powinien być 42): " + BinarySearchTree<int>.Counter);
+            Console.WriteLine("\nDrzewo 1:");
+            root.Write();
+            Console.WriteLine("Licznik (powinien być 42): " + BinarySearchTree<int>.Counter);
 
-            //var rootWith18And25 = root.Add(18).Add(35);
-            //Console.WriteLine("\nOrginalne drzewo 1 po modyfikacjach - powinno być takie samo jak drzewo 1:");
-            //root.Write();
-            //Console.WriteLine("\nDrzewo 1 po dodaniu 18 i 35 (Drzewo 2)");
-            //rootWith18And25.Write();
-            //Console.WriteLine("Licznik (powinien być 51): " + BinarySearchTree<int>.Counter);
+            var rootWith18And25 = root.Add(18).Add(35);
+            Console.WriteLine("\nOrginalne drzewo 1 po modyfikacjach - powinno być takie samo jak drzewo 1:");
+            root.Write();
+            Console.WriteLine("\nDrzewo 1 po dodaniu 18 i 35 (Drzewo 2)");
+            rootWith18And25.Write();
+            Console.WriteLine("Licznik (powinien być 51): " + BinarySearchTree<int>.Counter);
 
-            //var rootWith75 = root.Add(75);
-            //Console.WriteLine("\nOrginalne drzewo 1 po modyfikacjach - powinno być takie samo jak drzewo 1:");
-            //root.Write();
-            //Console.WriteLine("\nDrzewo 1 po dodaniu 75 - nic nie zmieniamy");
-            //rootWith75.Write();
-            //Console.WriteLine("Licznik (powinien być 52): " + BinarySearchTree<int>.Counter);
+            var rootWith75 = root.Add(75);
+            Console.WriteLine("\nOrginalne drzewo 1 po modyfikacjach - powinno być takie samo jak drzewo 1:");
+            root.Write();
+            Console.WriteLine("\nDrzewo 1 po dodaniu 75 - nic nie zmieniamy");
+            rootWith75.Write();
+            Console.WriteLine("Licznik (powinien być 52): " + BinarySearchTree<int>.Counter);
 
-            //var rootWithout15 = root.RemoveSubTree(15);
-            //Console.WriteLine("\nOrginalne drzewo 1 po kolejnych modyfikacjach - powinno być takie samo jak drzewo 1:");
-            //root.Write();
-            //Console.WriteLine("\nDrzewo 1 po usunięciu wierzchołka 15 (Drzewo 3)");
-            //rootWithout15.Write();
-            //Console.WriteLine("Licznik (powinien być 54): " + BinarySearchTree<int>.Counter);
+            var rootWithout15 = root.RemoveSubTree(15);
+            Console.WriteLine("\nOrginalne drzewo 1 po kolejnych modyfikacjach - powinno być takie samo jak drzewo 1:");
+            root.Write();
+            Console.WriteLine("\nDrzewo 1 po usunięciu wierzchołka 15 (Drzewo 3)");
+            rootWithout15.Write();
+            Console.WriteLine("Licznik (powinien być 54): " + BinarySearchTree<int>.Counter);
 
-            //var rootWithout125 = root.RemoveSubTree(125);
-            //Console.WriteLine("\nOrginalne drzewo 1 po kolejnych modyfikacjach - powinno być takie samo jak drzewo 1:");
-            //root.Write();
-            //Console.WriteLine("\nDrzewo 1 po usunięciu wierzchołka 125 - nic nie zmieniamy");
-            //rootWithout125.Write();
-            //Console.WriteLine("Licznik (powinien być 56): " + BinarySearchTree<int>.Counter);
+            var rootWithout125 = root.RemoveSubTree(125);
+            Console.WriteLine("\nOrginalne drzewo 1 po kolejnych modyfikacjach - powinno być takie samo jak drzewo 1:");
+            root.Write();
+            Console.WriteLine("\nDrzewo 1 po usunięciu wierzchołka 125 - nic nie zmieniamy");
+            rootWithout125.Write();
+            Console.WriteLine("Licznik (powinien być 56): " + BinarySearchTree<int>.Counter);
 
-            //var rootWithout50 = root.RemoveSubTree(50);
-            //Console.WriteLine("\nDrzewo 1 po usunięciu wierzchołka 50 - puste");
-            //rootWithout50.Write();
-            //Console.WriteLine("Licznik (powinien być 56): " + BinarySearchTree<int>.Counter);
+            var rootWithout50 = root.RemoveSubTree(50);
+            Console.WriteLine("\nDrzewo 1 po usunięciu wierzchołka 50 - puste");
+            rootWithout50.Write();
+            Console.WriteLine("Licznik (powinien być 56): " + BinarySearchTree<int>.Counter);
 
-			Console.WriteLine("\n------------Etap2--------------");
+            Console.WriteLine("\n------------Etap2--------------");
 
             //var rootWith25Found = root.Search(25);
             //Console.WriteLine("\nOrginalne drzewo 1 po modyfikacjach - powinno być takie samo jak drzewo 1:");
