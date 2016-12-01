@@ -31,5 +31,29 @@ namespace PO_BST
                 Console.Write(element + " ");
             Console.WriteLine(String.Empty);
         }
+        static public BinarySearchTree<TNode> Search<TNode>(this BinarySearchTree<TNode> tree, TNode value) where TNode : IComparable<TNode>, IEquatable<TNode>
+        {
+            if (tree == null)
+                return null;
+
+            int comparisonResult = value.CompareTo(tree.Value);
+            if (comparisonResult == 0)
+                return tree;
+            else if (comparisonResult < 0)
+                return tree.Left.Search(value);
+            else
+                return tree.Right.Search(value);
+        }
+
+        static public int NumberOfLeaves<TNode>(this BinarySearchTree<TNode> tree) where TNode : IComparable<TNode>, IEquatable<TNode>
+        {
+            if (tree == null)
+                return 0;
+
+            if (tree.Left == null && tree.Right == null)
+                return 1;
+
+            return tree.Left.NumberOfLeaves() + tree.Right.NumberOfLeaves();
+        }
     }
 }

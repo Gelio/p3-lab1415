@@ -84,31 +84,31 @@ namespace PO_BST
 
             Console.WriteLine("\n------------Etap2--------------");
 
-            //var rootWith25Found = root.Search(25);
-            //Console.WriteLine("\nOrginalne drzewo 1 po modyfikacjach - powinno być takie samo jak drzewo 1:");
-            //root.Write();
-            //Console.WriteLine("\nDrzewo o korzeniu w 25 (Drzewo 4)");
-            //rootWith25Found.Write();
-            //Console.WriteLine("Licznik (powinien być 56): " + BinarySearchTree<int>.Counter);
+            var rootWith25Found = root.Search(25);
+            Console.WriteLine("\nOrginalne drzewo 1 po modyfikacjach - powinno być takie samo jak drzewo 1:");
+            root.Write();
+            Console.WriteLine("\nDrzewo o korzeniu w 25 (Drzewo 4)");
+            rootWith25Found.Write();
+            Console.WriteLine("Licznik (powinien być 56): " + BinarySearchTree<int>.Counter);
 
-            //var rootWith125NotFound = root.Search(125);
-            //Console.WriteLine("\nOrginalne drzewo 1 po modyfikacjach - powinno być takie samo jak drzewo 1:");
-            //root.Write();
-            //Console.WriteLine("\nDrzewo o korzeniu w 125 - puste");
-            //rootWith125NotFound.Write();
-            //Console.WriteLine("Licznik (powinien być 56): " + BinarySearchTree<int>.Counter);
+            var rootWith125NotFound = root.Search(125);
+            Console.WriteLine("\nOrginalne drzewo 1 po modyfikacjach - powinno być takie samo jak drzewo 1:");
+            root.Write();
+            Console.WriteLine("\nDrzewo o korzeniu w 125 - puste");
+            rootWith125NotFound.Write();
+            Console.WriteLine("Licznik (powinien być 56): " + BinarySearchTree<int>.Counter);
 
-            //Console.WriteLine();
-            //Console.Write("Liczba liści w drzewie 1:  ");
-            //Console.WriteLine(root.NumberOfLeaves());
-            //Console.Write("Liczba liści w drzewie 2:  ");
-            //Console.WriteLine(rootWith18And25.NumberOfLeaves());
-            //Console.Write("Liczba liści w drzewie 3:  ");
-            //Console.WriteLine(rootWithout15.NumberOfLeaves());
-            //Console.Write("Liczba liści w drzewie 4:  ");
-            //Console.WriteLine(rootWith25Found.NumberOfLeaves());
+            Console.WriteLine();
+            Console.Write("Liczba liści w drzewie 1:  ");
+            Console.WriteLine(root.NumberOfLeaves());
+            Console.Write("Liczba liści w drzewie 2:  ");
+            Console.WriteLine(rootWith18And25.NumberOfLeaves());
+            Console.Write("Liczba liści w drzewie 3:  ");
+            Console.WriteLine(rootWithout15.NumberOfLeaves());
+            Console.Write("Liczba liści w drzewie 4:  ");
+            Console.WriteLine(rootWith25Found.NumberOfLeaves());
 
-			Console.WriteLine("\n------------Etap3--------------");
+            Console.WriteLine("\n------------Etap3--------------");
 
             //var root2 = BinarySearchTree<IndexableNode<int>>.SingleNode(new IndexableNode<int>(50))
             //    .Add(new IndexableNode<int>(25))
