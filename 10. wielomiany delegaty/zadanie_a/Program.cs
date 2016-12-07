@@ -97,6 +97,8 @@ namespace lab10
             //. pochodna1 (dok³adna i przybli¿ona)
             //. pochodna2 (dok³adna i przybli¿ona)
 
+            // wypisac wartosci wielomianu P i jego pochodnych
+            // (dokladnych i przyblizonych) dla x=2
             double x = 2;
             Console.WriteLine("  P(2) = " + P.Horner(2));
             Console.WriteLine(" P1(2) = " + P.Diff1().Horner(2));
@@ -104,20 +106,36 @@ namespace lab10
             Console.WriteLine(" P2(2) = " + P.Diff2().Horner(2));
             Console.WriteLine("~P2(2) = " + Diff2(P)(2));
 
-            // wypisac wartosci wielomianu P i jego pochodnych
-            // (dokladnych i przyblizonych) dla x=2
+            
 
             Console.WriteLine();
             Console.WriteLine("----------------   ETAP 3   ------------------------");
             //zastosowania algorytmów: Bisekcja oraz Newton do znalezienia minimum funkcji
             //(przedzia³y i funkcje s¹ tak ustalone, ¿eby nie by³o problemów numerycznych)
 
-            //double a = 2, b = 4;
-            //double m_Bisection, m_Newton;
-            //Function p1, p2;
+            double a = 2, b = 4;
+            double m_Bisection, m_Newton;
+            Function p1, p2;
+
+            p1 = P.Diff1().Horner;
+            m_Bisection = Bisection(p1, a, b);
+
+            p1 = Diff1(P);
+            p2 = Diff2(P);
+            m_Newton = Newton(p1, p2, a);
 
             // wypisac znalezione minima wielomianu P wykorzystuj¹c metody bisekcji i Newtona
             // (oraz dokladne i przyblizone pochodne)
+
+            Console.WriteLine("m_Bisection = " + m_Bisection);
+            Console.WriteLine(" P1(m_Bisection) = " + P.Diff1().Horner(m_Bisection));
+            Console.WriteLine("~P1(m_Bisection) = " + Diff1(P)(m_Bisection));
+
+            Console.WriteLine("   m_Newton = " + m_Newton);
+            Console.WriteLine(" P1(m_Newton) = " + P.Diff1().Horner(m_Newton));
+            Console.WriteLine("~P1(m_Newton) = " + Diff1(P)(m_Newton));
+
+            
 
             Console.WriteLine();
             Console.WriteLine("----------------   ETAP 4   ------------------------");
