@@ -46,5 +46,21 @@ namespace lab10
                 result = result * x + a[i];
             return result;
         }
+
+        public static Pol operator +(Pol p1, Pol p2)
+        {
+            int deg1 = p1.a.Length,
+                deg2 = p2.a.Length;
+            double[] coefficients = new double[Math.Max(deg1, deg2)];
+            int i;
+            for (i = 0; i < Math.Min(deg1, deg2); i++)
+                coefficients[i] = p1.a[i] + p2.a[i];
+            for (; i < deg1; i++)
+                coefficients[i] = p1.a[i];
+            for (; i < deg2; i++)
+                coefficients[i] = p2.a[i];
+
+            return new Pol(coefficients);
+        }
     }
 }

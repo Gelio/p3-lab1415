@@ -65,6 +65,17 @@ namespace lab10
             return x => (p.Horner(x + eps) - 2 * p.Horner(x) + p.Horner(x - eps)) / (eps * eps);
         }
 
+        public static Function Suma(params Function[] fArr)
+        {
+            return x =>
+            {
+                double result = 0;
+                foreach (var f in fArr)
+                    result += f(x);
+                return result;
+            };
+        }
+
 
         //-----------------------------------------------------------------------
         //-----------------------------------------------------------------------
@@ -141,15 +152,23 @@ namespace lab10
             Console.WriteLine("----------------   ETAP 4   ------------------------");
             //sumy wielomianów 
 
-            //Function f;
-            //Pol wiel;
+            Function f;
+            Pol wiel;
 
-            //double[] w1 = { 0, 0, 0, 1 };
-            //Pol wiel1 = new Pol(w1);
-            //double[] w2 = { 0, 0, -5 };
-            //Pol wiel2 = new Pol(w2);
-            //double[] w3 = { -10, 5 };
-            //Pol wiel3 = new Pol(w3);
+            double[] w1 = { 0, 0, 0, 1 };
+            Pol wiel1 = new Pol(w1);
+            double[] w2 = { 0, 0, -5 };
+            Pol wiel2 = new Pol(w2);
+            double[] w3 = { -10, 5 };
+            Pol wiel3 = new Pol(w3);
+
+            wiel = wiel1 + wiel2 + wiel3;
+            f = wiel.Diff1().Horner;
+
+            Console.WriteLine("suma operator bisekcja: " + Bisection(f, a, b));
+
+            f = Suma(Diff1(wiel1), Diff1(wiel2), Diff1(wiel3));
+            Console.WriteLine("suma funkcja bisekcja: " + Bisection(f, a, b));
 
             Console.WriteLine();
             Console.WriteLine("----------------   ETAP 5   ------------------------");
