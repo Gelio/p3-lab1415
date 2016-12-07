@@ -63,14 +63,22 @@ namespace lab10
             Console.WriteLine("----------------   ETAP 1   ------------------------");
             //postaæ: wielomianu, wielomianu pochodnej1 oraz wielomianu pochodnej2
 
-            //double[] w = { -10, 5, -5, 1 };
-            //Pol P = new Pol(w);
-            //w[0]=4;
-            //w[2]=-2;
-            //Pol Q = new Pol(w);
+            double[] w = { -10, 5, -5, 1 };
+            Pol P = new Pol(w);
+            w[0] = 4;
+            w[2] = -2;
+            Pol Q = new Pol(w);
 
             // wypisac wielomian P i jego pochodne
+            Console.WriteLine(" P(x) = " + P);
+            Console.WriteLine("P1(x) = " + P.Diff1());
+            Console.WriteLine("P2(x) = " + P.Diff2());
+
+            Console.WriteLine();
             // wypisac wielomian Q i jego pochodne
+            Console.WriteLine(" Q(x) = " + Q);
+            Console.WriteLine("Q1(x) = " + Q.Diff1());
+            Console.WriteLine("Q2(x) = " + Q.Diff2());
 
             Console.WriteLine();
             Console.WriteLine("----------------   ETAP 2   ------------------------");
