@@ -55,6 +55,16 @@ namespace lab10
             return x0;
         }
 
+        public static Function Diff1(Pol p)
+        {
+            return x => (p.Horner(x + eps) - p.Horner(x - eps)) / (2 * eps);
+        }
+
+        public static Function Diff2(Pol p)
+        {
+            return x => (p.Horner(x + eps) - 2 * p.Horner(x) + p.Horner(x - eps)) / (eps * eps);
+        }
+
 
         //-----------------------------------------------------------------------
         //-----------------------------------------------------------------------
@@ -87,7 +97,12 @@ namespace lab10
             //. pochodna1 (dok³adna i przybli¿ona)
             //. pochodna2 (dok³adna i przybli¿ona)
 
-            //double x = 2;
+            double x = 2;
+            Console.WriteLine("  P(2) = " + P.Horner(2));
+            Console.WriteLine(" P1(2) = " + P.Diff1().Horner(2));
+            Console.WriteLine("~P1(2) = " + Diff1(P)(2));
+            Console.WriteLine(" P2(2) = " + P.Diff2().Horner(2));
+            Console.WriteLine("~P2(2) = " + Diff2(P)(2));
 
             // wypisac wartosci wielomianu P i jego pochodnych
             // (dokladnych i przyblizonych) dla x=2

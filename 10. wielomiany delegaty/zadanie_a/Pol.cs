@@ -39,5 +39,12 @@ namespace lab10
             return s + a[0];
         }
 
+        public double Horner(double x)
+        {
+            double result = a[a.Length - 1];
+            for (int i = a.Length - 2; i >= 0; i--)
+                result = result * x + a[i];
+            return result;
+        }
     }
 }
