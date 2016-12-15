@@ -17,11 +17,11 @@ namespace PO_Events
 
         private void NotifyObjectChanged(object sender, NotifyEventArgs e)
         {
-            if (!(sender is Matryoshka))
+            if (!(sender is IChangeNotifing))
                 return;
 
-            Matryoshka sourceMatryoshka = sender as Matryoshka;
-            Console.WriteLine("Object " + sourceMatryoshka.Name + " changed property: " + e.PropertyName);
+            IChangeNotifing eventSource = sender as IChangeNotifing;
+            Console.WriteLine("Object " + eventSource.Name + " changed property: " + e.PropertyName);
         }
     }
 }

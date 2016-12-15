@@ -65,6 +65,7 @@ namespace PO_Events
             }
             set
             {
+                
                 _innerDoll = value;
                 if (Changed != null)
                     Changed(this, new NotifyEventArgs("InnerDoll"));

@@ -36,56 +36,56 @@ namespace PO_Events
 
             // ETAP3
             Console.WriteLine("ETAP 3");
-            //var firstLevel = new Matryoshka("First Inner Level");
+            var firstLevel = new Matryoshka("First Inner Level");
 
-            //outer.InnerDoll = firstLevel;
-            //Console.WriteLine("-------------------------------");
+            outer.InnerDoll = firstLevel;
+            Console.WriteLine("-------------------------------");
 
-            //firstLevel.Color = "Red";
+            firstLevel.Color = "Red";
 
-            //Console.WriteLine("-------------------------------");
+            Console.WriteLine("-------------------------------");
 
-            //smartWatcher.Watch(firstLevel);
+            smartWatcher.Watch(firstLevel);
 
-            //firstLevel.Theme = "Traditional";
+            firstLevel.Theme = "Traditional";
 
-            //Console.WriteLine("-------------------------------");
+            Console.WriteLine("-------------------------------");
 
-            //var secondLevel = new Matryoshka("Second Inner Level");
+            var secondLevel = new Matryoshka("Second Inner Level");
 
-            //outer.InnerDoll.InnerDoll = secondLevel;
-            //Console.WriteLine("-------------------------------");
+            outer.InnerDoll.InnerDoll = secondLevel;
+            Console.WriteLine("-------------------------------");
 
-            //secondLevel.Color = "Red";
+            secondLevel.Color = "Red";
 
-            //Console.WriteLine("-------------------------------");
+            Console.WriteLine("-------------------------------");
 
-            //smartWatcher.Watch(secondLevel);
+            smartWatcher.Watch(secondLevel);
 
-            //secondLevel.Theme = "Traditional";
-            //Console.WriteLine("-------------------------------");
+            secondLevel.Theme = "Traditional";
+            Console.WriteLine("-------------------------------");
 
-            //var firstLevel2 = new Matryoshka("First Inner Level2");
+            var firstLevel2 = new Matryoshka("First Inner Level2");
 
-            //outer.InnerDoll = firstLevel2;
-            //Console.WriteLine("-------------------------------");
+            outer.InnerDoll = firstLevel2;
+            Console.WriteLine("-------------------------------");
 
-            //firstLevel.Color = "Blue";
+            firstLevel.Color = "Blue";
 
-            //Console.WriteLine("-------------------------------");
-            //firstLevel2.Color = "Blue";
-			
-            //smartWatcher.Watch(firstLevel2);
-            //Console.WriteLine("-------------------------------");
+            Console.WriteLine("-------------------------------");
+            firstLevel2.Color = "Blue";
 
-            //firstLevel2.Theme = "Political";
+            smartWatcher.Watch(firstLevel2);
+            Console.WriteLine("-------------------------------");
 
-            //Console.WriteLine("-------------------------------");
-            //outer.InnerDoll = null;
-            //firstLevel.Color = "Green";
-            //firstLevel2.Color = "Green";
+            firstLevel2.Theme = "Political";
 
-		}
+            Console.WriteLine("-------------------------------");
+            outer.InnerDoll = null;
+            firstLevel.Color = "Green";
+            firstLevel2.Color = "Green";
+
+        }
 	}
 
     public class NotifyEventArgs : EventArgs
