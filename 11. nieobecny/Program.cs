@@ -8,21 +8,21 @@ namespace PO_Events
 		{
 			// ETAP1
             Console.WriteLine("ETAP 1");
-            //var outer = new Matryoshka("Outer");
-            //outer.Color = "Red";
-            //outer.Theme = "Traditional";
+            var outer = new Matryoshka("Outer");
+            outer.Color = "Red";
+            outer.Theme = "Traditional";
 
-            //Console.WriteLine("Do tej pory nie powinno się nic wypisać \n");
+            Console.WriteLine("Do tej pory nie powinno się nic wypisać \n");
 
-            //var simpleWatcher = new SimpleWatcher();
-            //simpleWatcher.Watch(outer);
+            var simpleWatcher = new SimpleWatcher();
+            simpleWatcher.Watch(outer);
 
-            //Console.WriteLine("-------------------------------");
+            Console.WriteLine("-------------------------------");
 
-            //outer.Color = "Blue";
-            //outer.Theme = "Politics";
+            outer.Color = "Blue";
+            outer.Theme = "Politics";
 
-			// ETAP2
+            // ETAP2
             Console.WriteLine("ETAP 2");
             //var smartWatcher = new SmartWatcher();
             //smartWatcher.Watch(outer);
