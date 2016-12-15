@@ -24,17 +24,17 @@ namespace PO_Events
 
             // ETAP2
             Console.WriteLine("ETAP 2");
-            //var smartWatcher = new SmartWatcher();
-            //smartWatcher.Watch(outer);
+            var smartWatcher = new SmartWatcher();
+            smartWatcher.Watch(outer);
 
-            //Console.WriteLine("-------------------------------");
-			
-            //outer.Color = "Blue";
-            //outer.Theme = "Politics";
+            Console.WriteLine("-------------------------------");
 
-            //simpleWatcher.StopWatching(outer);
+            outer.Color = "Blue";
+            outer.Theme = "Politics";
 
-			// ETAP3
+            simpleWatcher.StopWatching(outer);
+
+            // ETAP3
             Console.WriteLine("ETAP 3");
             //var firstLevel = new Matryoshka("First Inner Level");
 
