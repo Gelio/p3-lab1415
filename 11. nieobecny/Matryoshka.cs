@@ -20,8 +20,8 @@ namespace PO_Events
             set
             {
                 _name = value;
-                if (Changed != null)
-                    Changed(this, new NotifyEventArgs("Name"));
+                if (_changed != null)
+                    _changed(this, new NotifyEventArgs("Name"));
             }
         }
 
@@ -35,8 +35,8 @@ namespace PO_Events
             set
             {
                 _theme = value;
-                if (Changed != null)
-                    Changed(this, new NotifyEventArgs("Theme"));
+                if (_changed != null)
+                    _changed(this, new NotifyEventArgs("Theme"));
             }
         }
 
@@ -51,8 +51,8 @@ namespace PO_Events
             set
             {
                 _color = value;
-                if (Changed != null)
-                    Changed(this, new NotifyEventArgs("Color"));
+                if (_changed != null)
+                    _changed(this, new NotifyEventArgs("Color"));
             }
         }
 
@@ -65,13 +65,38 @@ namespace PO_Events
             }
             set
             {
-                
+                if (_innerDoll != null)
+                    _innerDoll.Changed -= _bubbleEvent;
+
                 _innerDoll = value;
-                if (Changed != null)
-                    Changed(this, new NotifyEventArgs("InnerDoll"));
+                if (_changed != null)
+                    _changed(this, new NotifyEventArgs("InnerDoll"));
+                if (_innerDoll != null)
+                    _innerDoll.Changed += _bubbleEvent;
             }
         }
 
-        public event EventHandler<NotifyEventArgs> Changed = null;
+        private event EventHandler<NotifyEventArgs> _changed = null;
+        public event EventHandler<NotifyEventArgs> Changed
+        {
+            add
+            {
+                _changed += value;
+                if (_innerDoll != null)
+                    _innerDoll.Changed += _bubbleEvent;
+            }
+            remove
+            {
+                _changed -= value;
+                if (_innerDoll != null)
+                    _innerDoll.Changed -= _bubbleEvent;
+            }
+        }
+
+        private void _bubbleEvent(object sender, NotifyEventArgs e)
+        {
+            if (_changed != null)
+                _changed(this, new NotifyEventArgs("InnerDoll." + e.PropertyName));
+        }
     }
 }
