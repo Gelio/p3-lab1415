@@ -64,5 +64,25 @@ namespace Lab12
         {
             return _value.ToString();
         }
+
+        async public Task<SlowInt> Max(SlowInt other)
+        {
+            if (_showDebugInfo)
+                Console.WriteLine("SlowInt Max started");
+
+            SlowInt result = await Task.Run<SlowInt>(() =>
+            {
+                Thread.Sleep(_delay);
+                if (other == null)
+                    return this;
+
+                return _value < other._value ? other : this;
+            });
+
+            if (_showDebugInfo)
+                Console.WriteLine("SlowInt Max finished");
+
+            return result;
+        }
     }
 }

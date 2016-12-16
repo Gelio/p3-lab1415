@@ -57,19 +57,19 @@ namespace Lab12
 
             Console.WriteLine("=== ETAP 3 ===");
 
-            //array1 = new SlowInt[]
-            //{
-            //    new SlowInt(5, true), new SlowInt(4, true), new SlowInt(12, true), new SlowInt(2, true)   
-            //};
-            //var max1 = array1.Max();
-            //var max2 = array2.Max();
+            array1 = new SlowInt[]
+            {
+                new SlowInt(5, true), new SlowInt(4, true), new SlowInt(12, true), new SlowInt(2, true)
+            };
+            var max1 = array1.Max();
+            var max2 = array2.Max();
 
-            //max1.Wait();
-            //max2.Wait();
+            max1.Wait();
+            max2.Wait();
 
-            //Console.WriteLine();
-            //Console.WriteLine("Results: {0},   {1}", max1.Result, max2.Result);
-            //Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Results: {0},   {1}", max1.Result, max2.Result);
+            Console.WriteLine();
         }
     }
 
