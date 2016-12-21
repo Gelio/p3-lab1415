@@ -13,28 +13,28 @@ namespace Lab12
         private async static Task RunTestsAsync()
         {
             Console.WriteLine("=== ETAP 1 ===");
-            //var a = new SlowString("ab", true);
-            //var b = new SlowString("c", true);
+            var a = new SlowString("ab", true);
+            var b = new SlowString("c", true);
 
-            //var result1 = a.Equal(b);
-            //var result2 = b.Last(b);
-            //var result3 = b.GreaterThen(a);
+            var result1 = a.Equal(b);
+            var result2 = b.Last(b);
+            var result3 = b.GreaterThan(a);
 
-            //result1.Wait();
-            //result2.Wait();
-            //result3.Wait();
+            result1.Wait();
+            result2.Wait();
+            result3.Wait();
 
-            //Console.WriteLine();
-            //Console.WriteLine("Results: {0},   {1},   {2}", result1.Result, result2.Result, result3.Result);
-            //Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Results: {0},   {1},   {2}", result1.Result, result2.Result, result3.Result);
+            Console.WriteLine();
 
-            //var result4 = await a.Equal(a);
-            //var result5 = await a.Last(b);
-            //var result6 = await a.GreaterThen(a);
+            var result4 = await a.Equal(a);
+            var result5 = await a.Last(b);
+            var result6 = await a.GreaterThan(a);
 
-            //Console.WriteLine();
-            //Console.WriteLine("Results: {0},   {1},   {2}", result4, result5, result6);
-            //Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Results: {0},   {1},   {2}", result4, result5, result6);
+            Console.WriteLine();
 
             Console.WriteLine("=== ETAP 2 ===");
 
