@@ -38,22 +38,22 @@ namespace Lab12
 
             Console.WriteLine("=== ETAP 2 ===");
 
-            //var array1 = new SlowString[]
-            //{
-            //    new SlowString("a", true), new SlowString("b", true), new SlowString("abc", true), new SlowString("bc", true)  
-            //};
+            var array1 = new SlowString[]
+            {
+                new SlowString("a", true), new SlowString("b", true), new SlowString("abc", true), new SlowString("bc", true)
+            };
 
-            //var last1 = await array1.Last(true);
+            var last1 = await array1.Last(true);
 
-            //var array2 = new SlowString[60];
-            //for(int i = 0; i < 60; ++i)
-            //    array2[i] = new SlowString(i.ToString(), false, 1);
+            var array2 = new SlowString[60];
+            for (int i = 0; i < 60; ++i)
+                array2[i] = new SlowString(i.ToString(), false, 1);
 
-            //var last2 = await array2.Last();
+            var last2 = await array2.Last();
 
-            //Console.WriteLine();
-            //Console.WriteLine("Results: {0},   {1}", last1, last2);
-            //Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Results: {0},   {1}", last1, last2);
+            Console.WriteLine();
 
             Console.WriteLine("=== ETAP 3 ===");
 

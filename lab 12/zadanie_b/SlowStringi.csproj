@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="SlowString.cs" />
+    <Compile Include="SlowStringExtender.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Wyniki.txt" />
