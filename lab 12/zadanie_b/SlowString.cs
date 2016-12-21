@@ -75,5 +75,22 @@ namespace Lab12
         {
             return Value;
         }
+
+        async public Task<SlowString> Concatenate(SlowString other)
+        {
+            if (Debug)
+                Console.WriteLine("Poczatek Concatenate");
+
+            SlowString result = await Task.Run<SlowString>(() =>
+            {
+                Thread.Sleep(Delay);
+
+                return new SlowString(Value + other.Value, Debug, Delay);
+            });
+
+            if (Debug)
+                Console.WriteLine("Koniec Concatenate");
+            return result;
+        }
     }
 }

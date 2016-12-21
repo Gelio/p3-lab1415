@@ -16,5 +16,34 @@ namespace Lab12
 
             return result;
         }
+
+        async public static Task<SlowString> Concatenate(this SlowString[] array)
+        {
+            if (array.Length == 0)
+                return null;
+
+            SlowString[] elementsLeft = array;
+            while (elementsLeft.Length > 1)
+            {
+                int newSize = (int)Math.Ceiling((decimal)elementsLeft.Length / 2);
+                Task<SlowString>[] tasks = new Task<SlowString>[newSize];
+                for (int i=0; i < newSize; i++)
+                {
+                    if (2 * i + 1 >= elementsLeft.Length)
+                        tasks[i] = Task.Run<SlowString>(() => elementsLeft[2 * i - 2]);
+                    else
+                        tasks[i] = elementsLeft[2 * i].Concatenate(elementsLeft[2 * i + 1]);
+                }
+
+                Task.WaitAll(tasks);
+
+                SlowString[] newElements = new SlowString[newSize];
+                for (int i = 0; i < tasks.Length; i++)
+                    newElements[i] = tasks[i].Result;
+                elementsLeft = newElements;
+            }
+
+            return elementsLeft[0];
+        }
     }
 }

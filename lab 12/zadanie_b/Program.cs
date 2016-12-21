@@ -57,15 +57,15 @@ namespace Lab12
 
             Console.WriteLine("=== ETAP 3 ===");
 
-            //var max1 = array1.Concatenate();
-            //var max2 = array2.Concatenate();
+            var max1 = array1.Concatenate();
+            var max2 = array2.Concatenate();
 
-            //max1.Wait();
-            //max2.Wait();
+            max1.Wait();
+            max2.Wait();
 
-            //Console.WriteLine();
-            //Console.WriteLine("Results: {0},   {1}", max1.Result, max2.Result);
-            //Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Results: {0},   {1}", max1.Result, max2.Result);
+            Console.WriteLine();
         }
     }
 
