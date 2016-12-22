@@ -8,7 +8,7 @@ using System.Xml.Serialization;
 
 namespace PO_Serialization
 {
-	public class Person : IEntity
+	[Serializable] public class Person : IEntity
 	{
 		public Person()
 		{
@@ -26,13 +26,21 @@ namespace PO_Serialization
 		/// </summary>
 		public string FullName
 		{
-			get { throw new NotImplementedException();}
+			get { return this.FirstName + " " + this.LastName; }
 		}
 
-		/// <summary>
-		/// Właściwość nie powinna być serializowana
-		/// </summary>
-		public string SecretPassword { get; set; }
+        
+        [NonSerialized]
+        string secretPassword;
+
+        /// <summary>
+        /// Właściwość nie powinna być serializowana
+        /// </summary>
+        [XmlIgnore]
+		public string SecretPassword {
+            get { return secretPassword; }
+            set { secretPassword = value; }
+        }
 
 		public List<Planet> Planets { get; private set; }
 
@@ -65,6 +73,8 @@ namespace PO_Serialization
 		/// </summary>
 		public Order(Person person, int amount)
 		{
+            if (person.SecretPassword != Password)
+                throw new Exception();
 		}
 
 		public int Id { get; set; }
