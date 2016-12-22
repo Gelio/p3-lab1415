@@ -110,10 +110,30 @@ namespace PO_Serialization
 		/// <summary>
 		/// Pobiera wszystkie obiekty danego typu z bazy dancyh.
 		/// </summary>
-		public IEnumerable<TEntity> GetCollection<TEntity>()
+		public IEnumerable<TEntity> GetCollection<TEntity>() where TEntity : IEntity
 		{
-			throw new NotImplementedException();
-		}
+            string[] filePaths = Directory.GetFiles(_baseDir);
+            foreach (var nextPath in filePaths)
+            {
+                string fileName = Path.GetFileNameWithoutExtension(nextPath);
+                string[] fileNameParts = fileName.Split('_');
+                if (fileNameParts.Length == 1)
+                    continue;
+
+                // Nazwa klasy może zawierać podkreślenia, więc należy zbudować całą nazwę klasy
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < fileNameParts.Length - 1; i++)
+                {
+                    if (sb.Length > 0)
+                        sb.Append("_");
+                    sb.Append(fileNameParts[i]);
+                }
+                if (sb.ToString() != typeof(TEntity).Name)
+                    continue;
+
+                yield return Get<TEntity>(int.Parse(fileNameParts[fileNameParts.Length - 1]));
+            }
+        }
 
         private string GetFilePath<TEntity>(TEntity entity) where TEntity : IEntity
         {
