@@ -51,8 +51,10 @@ namespace Lab14
         internal IEnumerable GetBookNamesAndPublishingYear()
         {
             //Metoda zwraca wszystkie tytuły książek z biblioteki wraz z rokiem publikacji
+            var seq = from book in Books
+                      select new { book.Title, book.PublishingDate.Year };
 
-            return new List<string>();
+            return seq;
         }
 
         public IEnumerable<Book> GetBooksForAuthor(string firstName, string lastName)
