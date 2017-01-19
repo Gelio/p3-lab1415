@@ -82,8 +82,13 @@ namespace Lab14
         public IEnumerable GetAuthorsSortedByOldestBook()
         {
             //Metoda zwraca imiona i nazwiska autorów posortowane wg. roku wydania najstarszej książki jaką napisali
+            var seq = from author in Authors
+                      join book in Books on author.Id equals book.AuthorId into authorBooks
+                      let oldestBookPublicationYear = authorBooks.Min(book => book.PublishingDate.Year)
+                      orderby oldestBookPublicationYear
+                      select new { author.FirstName, author.LastName };
 
-            return new List<object>();
+            return seq;
         }
     }
 }
