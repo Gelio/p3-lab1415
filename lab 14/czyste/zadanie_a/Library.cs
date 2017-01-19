@@ -72,8 +72,11 @@ namespace Lab14
         public IEnumerable GetGenresWithPagesSums()
         {
             //Metoda zwraca nazwy gatunków i sumy stron książek należących do danego gatunku
-
-            return new List<object>();
+            var seq = from genre in Genres
+                      join book in Books on genre.Id equals book.GenreId into genreBooks
+                      select new { Id = genre.Id, Name = genre.Name, Sum = genreBooks.Sum(book => book.Pages) };
+            
+            return seq;
         }
 
         public IEnumerable GetAuthorsSortedByOldestBook()
