@@ -61,7 +61,12 @@ namespace Lab14
         {
             //Metoda zwraca wszystkie książki autora podanego z imienia i nazwiska
 
-            return new List<Book>();
+            var seq = from author in Authors
+                      where author.FirstName == firstName && author.LastName == lastName
+                      join book in Books on author.Id equals book.AuthorId
+                      select book;
+
+            return seq;
         }
 
         public IEnumerable GetGenresWithPagesSums()
